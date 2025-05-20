@@ -1,16 +1,19 @@
 import penguin from "../../assets/image/penguin.svg";
 import bill from "../../assets/image/penguin-bill.svg";
+import { forwardRef } from "react";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
-export default function FirstSection() {
+const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
-    <div
+    <section
       className={
         "relative flex h-screen overflow-hidden bg-blue-600 bg-size-[auto_80vh] bg-bottom-right bg-no-repeat"
       }
+      ref={ref}
     >
       <div className={"container mx-auto flex gap-10"}>
         <div className="absolute justify-center overflow-hidden sm:relative">
-          <div className="animate-scroll-up w-[15vw] max-w-[200px] min-w-[150px]">
+          <div className="animate-scroll-up w-[20vw] max-w-[200px] min-w-[150px]">
             <img src={bill} className="h-auto w-full" alt="penguin" />
             <img src={bill} className="h-auto w-full" alt="penguin" />
             <img src={bill} className="h-auto w-full" alt="penguin" />
@@ -23,12 +26,13 @@ export default function FirstSection() {
             영하 30도 환경에서도 신선도를 유지하는
             <br /> 극저온 맞춤 콜드체인 솔루션
           </p>
-          <button className="mt-5 w-fit rounded-full bg-white px-5 py-2 text-2xl font-bold text-blue-600 hover:bg-neutral-50">
-            버튼
-          </button>
         </div>
       </div>
-
+      <MdKeyboardDoubleArrowDown
+        className={
+          "absolute bottom-3 left-1/2 z-10 size-10 -translate-x-1/2 animate-bounce text-white"
+        }
+      />
       <img
         src={penguin}
         className={
@@ -36,6 +40,8 @@ export default function FirstSection() {
         }
         alt={"penguin"}
       />
-    </div>
+    </section>
   );
-}
+});
+
+export default HeroSection;
