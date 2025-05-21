@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import HeroSection from "./components/section/HeroSection.tsx";
 import ContactSection from "./components/section/ContactSection.tsx";
 import Header from "./components/Header.tsx";
@@ -6,6 +6,7 @@ import { useRef } from "react";
 import AboutUsSection from "./components/section/AboutUsSection.tsx";
 import IceBoxSection from "./components/section/IceBoxSection.tsx";
 import FeatureSection from "./components/section/FeatureSection.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
   const HeroRef = useRef<HTMLDivElement | null>(null);
@@ -29,6 +30,7 @@ function App() {
         <AboutUsSection ref={AboutRef} />
         <ContactSection ref={ContactRef} />
       </main>
+      <Footer />
     </>
   );
 }

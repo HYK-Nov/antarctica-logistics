@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "../utils/cn.ts";
+import logo from "@/assets/image/logo.svg";
+import logo_white from "@/assets/image/logo-white.svg";
 
 type Props = {
   onMenuClick: (section: number) => void;
@@ -30,23 +32,25 @@ export default function Header({ onMenuClick }: Props) {
       >
         <nav className={"container flex h-full items-center justify-between"}>
           <button
-            className={"Aggro p-1 text-3xl font-black"}
+            className={"Aggro h-[45px] p-1 text-4xl font-black"}
             onClick={() => onMenuClick(0)}
           >
-            남극물류
+            <img
+              src={position > 0 ? logo : logo_white}
+              alt="logo"
+              className={"h-full"}
+            />
           </button>
-          <div className={"flex items-center gap-10"}>
-            <div className={"flex items-center gap-5"}>
-              <button className={"p-1"} onClick={() => onMenuClick(1)}>
-                아이스 박스
-              </button>
-              <button className={"p-1"} onClick={() => onMenuClick(2)}>
-                기술력
-              </button>
-              <button className={"p-1"} onClick={() => onMenuClick(3)}>
-                ABOUT US
-              </button>
-            </div>
+          <div className={"flex items-center gap-5"}>
+            <button className={"p-1"} onClick={() => onMenuClick(1)}>
+              아이스 박스
+            </button>
+            <button className={"p-1"} onClick={() => onMenuClick(2)}>
+              기술력
+            </button>
+            <button className={"p-1"} onClick={() => onMenuClick(3)}>
+              ABOUT US
+            </button>
             <button
               className={cn(
                 "rounded-full bg-white px-4 py-2 text-xl text-blue-600 hover:bg-neutral-50",
