@@ -1,4 +1,4 @@
-import penguin from "@/assets/image/penguin.svg";
+import penguin from "@/assets/image/main_penguin.png";
 import bill from "@/assets/image/penguin-bill.svg";
 import pattern from "@/assets/image/pattern.svg";
 import { forwardRef } from "react";
@@ -56,7 +56,7 @@ const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
       <img
         src={penguin}
         className={
-          "animate-slide-in-left absolute right-0 bottom-0 max-h-[75vh] w-[60%] max-w-[600px] translate-x-[30%] place-self-end object-contain transition"
+          "animate-slide-in-left absolute right-0 bottom-0 w-[50%] max-w-[450px] translate-x-[20%] translate-y-[15%] object-contain transition"
         }
         alt={"penguin"}
       />

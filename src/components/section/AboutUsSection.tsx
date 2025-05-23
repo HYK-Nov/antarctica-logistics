@@ -13,13 +13,13 @@ const AboutUsSection = forwardRef<HTMLElement>((_props, ref) => {
           <div className={"flex flex-col items-center gap-10"}>
             <div
               className={
-                "size-35 rounded-full bg-[length:auto_85%] bg-[center_120%] bg-no-repeat ring-8 ring-blue-600"
+                "size-40 rounded bg-blue-300 bg-[length:auto_110%] bg-[center_80%] bg-no-repeat ring-0 ring-blue-600"
               }
               style={{ backgroundImage: `url(${item.image})` }}
             />
             <div className={"text-center"}>
               <p className={"text-2xl text-blue-600"}>{item.position}</p>
-              <p className={"text-4xl"}>{item.name}</p>
+              <p className={"text-3xl"}>{item.name}</p>
             </div>
           </div>
         ))}

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme{
-    --animate-slide-in-left: slide-in-left 0.8s ease-in-out forwards;
+    --animate-slide-in-left: slide-in-left 0.6s ease-in-out forwards;
     --animate-scroll-up: scroll-up 18s linear infinite;
     @keyframes slide-in-left{
         0%{

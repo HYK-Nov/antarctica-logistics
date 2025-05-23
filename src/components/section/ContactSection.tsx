@@ -22,11 +22,15 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
     setValue,
     watch,
     handleSubmit,
-    // formState: { errors },
+    formState: { errors },
   } = useForm<FormData>();
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+    setValue("title", "");
+    setValue("content", "");
+    setValue("phone", "");
+    setValue("email", "");
+    alert("접수되었습니다.");
   };
 
   const formatPhoneNumber = (value: string) => {
@@ -86,6 +90,11 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
                 className="w-full rounded border border-neutral-200 p-3 focus:ring-1 focus:ring-blue-600/40 focus:outline-blue-600"
                 {...register("title", { required: true, maxLength: 50 })}
               />
+              {errors.title && (
+                <span className={"text-sm text-red-500"}>
+                  잘못된 제목 형식입니다
+                </span>
+              )}
             </div>
             <div>
               <p className={"pb-3 text-xl font-bold"}>
@@ -99,6 +108,11 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
                 style={{ resize: "none" }}
                 {...register("content", { required: true, maxLength: 5000 })}
               />
+              {errors.content && (
+                <span className={"text-sm text-red-500"}>
+                  잘못된 내용 형식입니다
+                </span>
+              )}
             </div>
             <div className={"grid grid-cols-1 gap-5 sm:grid-cols-2"}>
               <div>
@@ -115,6 +129,11 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
                   onChange={handlePhoneChange}
                   value={watch("phone") || ""}
                 />
+                {errors.phone && (
+                  <span className={"text-sm text-red-500"}>
+                    잘못된 연락처 형식입니다
+                  </span>
+                )}
               </div>
               <div>
                 <p className={"pb-3 text-xl font-bold"}>
@@ -130,6 +149,11 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
                     maxLength: 30,
                   })}
                 />
+                {errors.email && (
+                  <span className={"text-sm text-red-500"}>
+                    잘못된 이메일 형식입니다
+                  </span>
+                )}
               </div>
             </div>
             <button

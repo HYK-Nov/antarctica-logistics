@@ -46,7 +46,7 @@ export default function Header({ onMenuClick }: Props) {
               아이스 박스
             </button>
             <button className={"p-1"} onClick={() => onMenuClick(2)}>
-              기술력
+              콜드체인
             </button>
             <button className={"p-1"} onClick={() => onMenuClick(3)}>
               ABOUT US

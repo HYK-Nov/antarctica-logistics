@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# 남극물류
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Image](https://github.com/user-attachments/assets/1732c2cf-7a0e-4528-b07b-055ffcdfa7d9)
 
-Currently, two official plugins are available:
+> 가상의 콜드체인 기업 홈페이지
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 프로젝트 기간
 
-## Expanding the ESLint configuration
+2025.05.20 ~ 2025.05.27
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ 기술 스택
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 프론트엔드
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<p>
+<img  src="https://img.shields.io/badge/React-ffffff?logo=react"/>
+<img  src="https://img.shields.io/badge/Vite-ffffff?logo=vite"/>
+<img  src="https://img.shields.io/badge/TypeScript-ffffff?logo=typescript"/>
+<img  src="https://img.shields.io/badge/ReactHookForm-ffffff?logo=reacthookform"/>
+</p>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 스타일링
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+<p>
+<img  src="https://img.shields.io/badge/Tailwind Css-ffffff?logo=tailwindcss"/>
+<img  src="https://img.shields.io/badge/shadcn/ui-000000?logo=shadcnui"/>
+</p>
+
+### 배포
+
+<img  src="https://img.shields.io/badge/Vercel-000000?logo=vercel"/>
