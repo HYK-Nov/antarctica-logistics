@@ -25,7 +25,7 @@ export default function Header({ onMenuClick }: Props) {
     <>
       <header
         className={cn(
-          "fixed top-0 z-50 h-[70px] w-full bg-blue-600/40 text-xl font-bold text-white backdrop-blur-[3px] transition",
+          "fixed top-0 z-50 hidden h-[70px] w-full bg-blue-600/40 text-xl font-black text-white backdrop-blur-[3px] transition md:block",
           { "bg-white text-blue-600": position > 0 },
         )}
         id={"top"}

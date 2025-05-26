@@ -2,7 +2,6 @@ import penguin from "@/assets/image/main_penguin.png";
 import bill from "@/assets/image/penguin-bill.svg";
 import pattern from "@/assets/image/pattern.svg";
 import { forwardRef } from "react";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
@@ -19,7 +18,13 @@ const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
     >
       <div className={"container mx-auto flex gap-10"}>
         <div className="absolute justify-center overflow-hidden sm:relative">
-          <div className="animate-scroll-up hidden w-[15vw] max-w-[200px] min-w-[80px] sm:block">
+          <div className="animate-scroll-up hidden w-[15vw] max-w-[200px] min-w-[80px] md:block">
+            <img src={bill} className="h-auto w-full" alt="penguin" />
+            <img src={bill} className="h-auto w-full" alt="penguin" />
+            <img src={bill} className="h-auto w-full" alt="penguin" />
+            <img src={bill} className="h-auto w-full" alt="penguin" />
+            <img src={bill} className="h-auto w-full" alt="penguin" />
+            <img src={bill} className="h-auto w-full" alt="penguin" />
             <img src={bill} className="h-auto w-full" alt="penguin" />
             <img src={bill} className="h-auto w-full" alt="penguin" />
             <img src={bill} className="h-auto w-full" alt="penguin" />
@@ -27,20 +32,17 @@ const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
           </div>
         </div>
         <div className="absolute top-1/2 left-1/2 z-10 flex w-full max-w-xl -translate-x-1/2 -translate-y-1/3 flex-col items-center justify-center gap-5 text-center text-white sm:text-2xl">
-          <p className="Aggro text-4xl font-bold text-shadow-lg sm:text-6xl">
+          <p className="Aggro animate-slide-in-up text-4xl font-bold transition duration-800 text-shadow-lg sm:text-6xl">
             🧊 아이스 박스 🧊
           </p>
           <p
             className={
-              "font-semibold text-shadow-[0_0_0.5rem_rgb(0_0_0_/_0.5)]"
+              "animate-slide-in-up font-semibold duration-800 text-shadow-[0_0_0.5rem_rgb(0_0_0_/_0.5)]"
             }
           >
             영하 30도 환경에서도 신선도를 유지하는
             <br /> 극저온 맞춤 콜드체인 솔루션
           </p>
-          <MdKeyboardDoubleArrowDown
-            className={"z-10 size-10 animate-bounce text-white"}
-          />
         </div>
       </div>
       <img

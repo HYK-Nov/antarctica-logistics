@@ -56,10 +56,10 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
       <section
-        className={"container flex min-h-screen flex-col items-center py-20"}
+        className={"flex min-h-screen flex-col items-center py-20"}
         ref={ref}
       >
-        <h1 className={"Aggro text-4xl text-blue-600"}>문의하기</h1>
+        <h1 className={"Aggro text-5xl text-blue-600"}>문의하기</h1>
 
         <div className={"grid w-full grid-cols-1 gap-10 py-10 md:grid-cols-2"}>
           {/* 지도 */}
