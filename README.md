@@ -3,7 +3,7 @@
 ![Image](https://github.com/user-attachments/assets/1732c2cf-7a0e-4528-b07b-055ffcdfa7d9)
 
 ## 📖 프로젝트 소개
-> [[ 배포링크 ]](https://antartica-logistics.vercel.app/)
+> [[ 배포링크 ]](https://antarctica-logistics.vercel.app/)
 > 
 > [[ 구글 슬라이드 ]](https://docs.google.com/presentation/d/1FJwsNNFR6w4A2l36R28CFle-fbhBCzRzaMzwND2MQec/edit?usp=sharing)
 
