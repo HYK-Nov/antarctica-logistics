@@ -1,6 +1,8 @@
 import penguin from "@/assets/image/main_penguin.png";
 import bill from "@/assets/image/penguin-bill.svg";
 import pattern from "@/assets/image/pattern.svg";
+import iceberg1 from "@/assets/image/iceberg1.png";
+import iceberg2 from "@/assets/image/iceberg2.png";
 import { forwardRef } from "react";
 
 const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
@@ -46,12 +48,12 @@ const HeroSection = forwardRef<HTMLElement>((_props, ref) => {
         </div>
       </div>
       <img
-        src={"src/assets/image/iceberg1.png"}
+        src={iceberg1}
         className={"absolute bottom-0 left-0 -z-5 max-h-[45vh]"}
         alt={"iceberg"}
       />
       <img
-        src={"src/assets/image/iceberg2.png"}
+        src={iceberg2}
         className={"absolute right-0 bottom-0 -z-10 max-h-[35vh]"}
         alt={"iceberg"}
       />
