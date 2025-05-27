@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { employeeData } from "../../data/employeeData.ts";
+import { employeeData } from "@/data/employeeData.ts";
 import meeting from "@/assets/image/meeting.png";
 
 const AboutUsSection = forwardRef<HTMLElement>((_props, ref) => {
@@ -43,17 +43,15 @@ const AboutUsSection = forwardRef<HTMLElement>((_props, ref) => {
             <p>
               신뢰, 정밀함, 그리고 열정은 우리 팀의 DNA입니다.
               <br />
-              고객의 소중한 물품이 <b>
-                신선하게 목적지에 도달하는 순간까지
-              </b>{" "}
-              펭귄 팀이 함께합니다.
+              고객의 소중한 물품이 <b>신선하게 목적지에 도달하는 순간까지</b>
+              &nbsp; 펭귄 팀이 함께합니다.
             </p>
           </div>
         </div>
       </div>
       <div className={"Aggro grid grid-cols-2 gap-10 md:grid-cols-4"}>
-        {employeeData.map((item) => (
-          <div className={"flex flex-col items-center gap-10"}>
+        {employeeData.map((item, idx) => (
+          <div key={idx} className={"flex flex-col items-center gap-10"}>
             <div
               className={
                 "size-40 rounded bg-blue-300 bg-[length:auto_110%] bg-[center_80%] bg-no-repeat ring-0 ring-blue-600"

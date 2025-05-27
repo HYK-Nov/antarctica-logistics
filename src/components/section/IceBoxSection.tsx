@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import { iceboxData } from "../../data/iceboxData.ts";
+import { iceboxData } from "@/data/iceboxData.ts";
 
 const IceBoxSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
@@ -46,8 +46,9 @@ const IceBoxSection = forwardRef<HTMLElement>((_props, ref) => {
               "grid grid-cols-1 gap-x-10 gap-y-15 break-keep sm:grid-cols-2 lg:grid-cols-4"
             }
           >
-            {iceboxData.map((item) => (
+            {iceboxData.map((item, idx) => (
               <div
+                key={idx}
                 className={
                   "flex w-full flex-col items-center gap-5 text-center"
                 }

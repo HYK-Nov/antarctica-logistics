@@ -7,12 +7,8 @@ import path from "path";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
-    alias: [
-      { find: "@", replacement: path.resolve(__dirname, "src") },
-      {
-        find: "@components",
-        replacement: path.resolve(__dirname, "src/components"),
-      },
-    ],
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
 });

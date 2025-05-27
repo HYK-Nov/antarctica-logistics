@@ -9,6 +9,7 @@ import FeatureSection from "./components/section/FeatureSection.tsx";
 import Footer from "./components/Footer.tsx";
 import NavSection from "./components/section/NavSection.tsx";
 import Snowfall from "./components/Snowfall.tsx";
+import { Toaster } from "@/components/ui/sonner.tsx";
 
 function App() {
   const HeroRef = useRef<HTMLDivElement | null>(null);
@@ -73,6 +74,7 @@ function App() {
           <ContactSection ref={ContactRef} />
         </div>
       </main>
+      <Toaster />
       <Footer />
     </>
   );

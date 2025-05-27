@@ -39,8 +39,9 @@ const FeatureSection = forwardRef<HTMLElement>((_props, ref) => {
             "grid grid-cols-1 gap-x-10 gap-y-15 sm:grid-cols-2 lg:grid-cols-4"
           }
         >
-          {featureData.map((item) => (
+          {featureData.map((item, idx) => (
             <div
+              key={idx}
               className={"flex w-full flex-col items-center gap-5 text-center"}
             >
               <div

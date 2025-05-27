@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { cn } from "../utils/cn.ts";
 import logo from "@/assets/image/logo.svg";
 import logo_white from "@/assets/image/logo-white.svg";
+import { cn } from "@/lib/utils.ts";
 
 type Props = {
   onMenuClick: (section: number) => void;

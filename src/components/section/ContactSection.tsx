@@ -6,6 +6,8 @@ import {
   useMarkerRef,
 } from "@vis.gl/react-google-maps";
 import { type SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { FaCheckCircle } from "react-icons/fa";
 
 type FormData = {
   title: string;
@@ -25,12 +27,19 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
+  const onSubmit: SubmitHandler<FormData> = () => {
     setValue("title", "");
     setValue("content", "");
     setValue("phone", "");
     setValue("email", "");
-    alert("접수되었습니다.");
+    toast.success(
+      <p className={"Pretendard text-base text-neutral-600"}>
+        성공적으로 접수되었습니다.
+      </p>,
+      {
+        icon: <FaCheckCircle className={"text-xl text-emerald-400"} />,
+      },
+    );
   };
 
   const formatPhoneNumber = (value: string) => {
@@ -157,6 +166,7 @@ const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
               </div>
             </div>
             <button
+              id="hs-new-toast"
               className={
                 "mt-5 w-full rounded bg-blue-600 px-10 py-2 text-lg font-bold text-white"
               }
