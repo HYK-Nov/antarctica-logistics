@@ -46,6 +46,21 @@
 - 간단한 입력 폼 또는 연락처 안내
 - 구글맵 API
 
+## 📁 프로젝트 구조
+```html
+antarctica-logistics/
+├── public/             # 정적 파일 (아이콘)
+├── src/
+│   ├── assets/         # 이미지 및 아이콘
+│   ├── components/     # 섹션별 컴포넌트
+│   ├── data/           # JSON 형식의 데이터
+│   ├── styles/         # Tailwind 설정
+│   └── App.tsx         # 메인 컴포넌트
+├── tailwind.config.js  # Tailwind 설정 파일
+├── tsconfig.json       # TypeScript 설정 파일
+└── vite.config.ts      # Vite 설정 파일
+```
+
 ## 🛠️ 기술 스택
 
 ### 💻 프론트엔드
@@ -67,19 +82,3 @@
 ### 🚀 배포
 
 <img  src="https://img.shields.io/badge/Vercel-000000?logo=vercel"/>
-
-## 프로젝트 구조
-```html
-antarctica-logistics/
-├── public/             # 정적 파일 (아이콘)
-├── src/
-│   ├── assets/         # 이미지 및 아이콘
-│   ├── components/     # 섹션별 컴포넌트
-│   ├── data/           # JSON 형식의 데이터
-│   ├── styles/         # Tailwind 설정
-│   └── App.tsx         # 메인 컴포넌트
-├── tailwind.config.js  # Tailwind 설정 파일
-├── tsconfig.json       # TypeScript 설정 파일
-└── vite.config.ts      # Vite 설정 파일
-
-```
